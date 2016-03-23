@@ -1,3 +1,6 @@
+--Perico Dan B. Dionisio
+--2013-13692
+
 -- Library Statements
 library IEEE; use IEEE.std_logic_1164.all;
 
@@ -15,6 +18,7 @@ begin
 	process (in_b(2), in_b(1), in_b(0), out_b(2), out_b(1), out_b(0)) is -- activate when any input changes
 	begin
 		if( (in_b(2)='1' or in_b(1)='1' or in_b(0)='1') and (out_b(2)='1' or out_b(1)='1' or out_b(0)='1') )
+		--activate the alarm when at least one in and one out
 			then alarm_s <= '1';
 		else
 			alarm_s <= '0';
